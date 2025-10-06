@@ -1,0 +1,21 @@
+{
+	"name": "Computing System 2 Exercise",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--name=COMPUTING_SYSTEM_2_EXERCISE"
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": true,
+			"configureZshAsDefaultShell": true,
+			"installOhMyZsh": true,
+			"installOhMyZshConfig": true,
+			"upgradePackages": true,
+			"nonFreePackages": false
+		}
+	},
+	"remoteUser": "ubuntu"
+}
