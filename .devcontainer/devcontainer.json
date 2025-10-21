@@ -5,7 +5,8 @@
 		"dockerfile": "Dockerfile"
 	},
 	"runArgs": [
-		"--name=COMPUTING_SYSTEM_2_EXERCISE"
+		"--name=COMPUTING_SYSTEM_2_EXERCISE",
+		"--cap-add=SYS_NICE"
 	],
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
