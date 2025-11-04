@@ -8,10 +8,10 @@ def main_input_wait():
     count = 1
     while True:
         # input() が呼び出されるとカーネルに制御が戻され
-        # プロセスはキーボードからのI/O割り込みを待つ状態に遷移する
+        # プロセスはキーボードからの入力割込みを待つ状態に遷移する
         user_input = input(f"\n[{count}] Enter something and press Enter (q to quit): ")
 
-        # 割り込み（入力）が完了した後の処理
+        # 割込み（入力）が完了した後の処理
         print(f"I/O Completion Notification: Processed input '{user_input}'.", flush=True)
         count += 1
 
