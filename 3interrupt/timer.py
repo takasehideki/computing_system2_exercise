@@ -23,7 +23,7 @@ def main_timer_wait():
     except OSError as e:
         sys.stderr.write(f"Failed to set signal handler: {e}\n")
         sys.exit(1)
-    
+
     # 5秒後に SIGALRM シグナルをプロセスに送信するようにOSにタイマを設定
     # カーネルがタイマ満了という外部イベントを監視する
     signal.alarm(INTERVAL)
@@ -35,7 +35,7 @@ def main_timer_wait():
         # 無限ループでメインの作業を実行
         counter = 0
         while True:
-            time.sleep(1.0) 
+            time.sleep(1.0)
             counter += 1
             print(f"Main loop running... ({counter})", end="\r", flush=True)
     except KeyboardInterrupt:
