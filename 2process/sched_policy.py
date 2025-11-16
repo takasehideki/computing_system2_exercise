@@ -11,18 +11,18 @@ def main():
     count = 0
 
     # set busy loop duration
-    BUSY_DURATION_SECONDS = 1.0 
+    BUSY_DURATION_SECONDS = 1.0
 
     # main loop
     try:
         while count < 30:  # limit to 30 iterations
             print(f"{message}: {count}")
             count += 1
-            
+
             # start busy loop
             start_time = time.time()
             while time.time() - start_time < BUSY_DURATION_SECONDS:
-                pass 
+                pass
 
     # handle keyboard interrupt (e.g., Ctrl+C) to exit gracefully
     except KeyboardInterrupt:

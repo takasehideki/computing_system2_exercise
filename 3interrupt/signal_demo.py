@@ -50,7 +50,7 @@ def main_signal_demo():
     print("Exiting program")
 
     # 実行中のアラームをキャンセルしてクリーンアップする
-    signal.alarm(0) 
+    signal.alarm(0)
     sys.exit(0)
 
 if __name__ == "__main__":
