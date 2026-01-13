@@ -30,5 +30,14 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
+# 9programming で必要なパッケージをインストール
+RUN apt-get update && apt-get install -y \
+  python3-pip elixir \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+# PythonのJIT実行に関するパッケージをインストール
+RUN pip3 install --break-system-packages --no-cache-dir numba
+
 # デフォルトのコマンドを指定
 CMD ["bash"]
